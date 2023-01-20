@@ -79,6 +79,13 @@ client.on("ready", () => {
   }, 180000);
 })
 
+client.on("ready", async function() {
+  const voiceChannel = "Voice Channel id" // voice channel id of the server
+  client.channels.cache.get(voiceChannel).join()
+  .catch(err => {
+  throw err;
+  })
+  })
 
 
 client.login("TOKEN") // Submit your account's token here
